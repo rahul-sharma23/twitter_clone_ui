@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { Counter } from './features/counter/Counter';
+import store from './store/reduxstore'
+import { Provider } from 'react-redux'
+import { Link } from 'react-router-dom'
 
+
+// include tailwind css as well here
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        {/* <Link to="/other-component">Go to Other Component</Link> */}
+        <Counter></Counter>
+
+      </div>
+    </Provider>
   );
 }
 
