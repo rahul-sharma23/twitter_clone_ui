@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+/* Add this to your tailwind.config.css or custom CSS file */
+
+.sticky-parent {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  height: 100vh;  /* Ensures the div sticks within the viewport height */
+  overflow-y: auto; /* To enable scrolling inside the parent div */
+}
+
+.sticky-input {
+  position: sticky;
+  top: 0;
+  z-index: 10;  /* Make sure the input field is always above the content */
+  background-color: white; /* Keeps the input's background solid */
+  padding-bottom: 10px;
+}
